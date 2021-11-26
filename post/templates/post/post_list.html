@@ -5,6 +5,7 @@
 
 .container {
     margin-bottom: 10px;
+    font-size:23px;
 }
 
 a:hover {
@@ -91,6 +92,8 @@ table {
     font-weight: bold;
 }
 
+
+
 /* 데스크탑 */
 @media screen and (min-width: 1024px) {
 /* 타블렛 */
@@ -138,16 +141,20 @@ table {
    #td-date, .td-date      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:50px;}
    #td-author, .td-author      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:50px;}
    .searchbutton img{position:absolute;left:217px;top:15px;}
-    .divpop {
-        position: absolute; z-index:999; top:800px; left:50%;
-        width:450px; height: 410px; display:none;
-        transform: translate(-50%,-50%);
-        min-width: 300px;
-        max-width: 100%;
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%);
-    }
+.divpop {
+    z-index: 1;
+    position: absolute;
+    font-size:23px;
+    top: 850px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 730px;
+    max-width: 750px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%);
+  }
 
     .button_area {position:absolute;bottom:0;left:10px;top:370px;}
 
@@ -189,6 +196,7 @@ table {
             </p>
        </div>
        <div class="button_area">
+           <br><br>
           <input type='checkbox' name='chkbox' id='todaycloseyn' value='Y'> 오늘 하루 이 창을 열지 않음
           <a href='#' style="color:#57B59A"; onclick="javascript:closeWin(1);"><B>[닫기]</B></a>
        </div>

@@ -3,33 +3,11 @@
 
 {% block content %}
 <style>
-
-@media screen and (max-width: 1024px) {
-    footer {
-        margin-top: 465px;
-    }
-
     .loginbox {
-        width: 90%;
-        height: auto;
-        text-align: center;
-        border: 1px solid #EAEAEA;
-        border-radius: 40px;
-        padding: 10%;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 200px;
-        background: #FDFFFF;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    footer {
-        margin-top: 0px;
-    }
-
-    .loginbox {
+        position:relative;
+        top:350px;
         width: 70%;
+        font-size:23px;
         text-align: center;
         border: 1px solid #EAEAEA;
         border-radius: 40px;
@@ -37,14 +15,13 @@
         margin: 10% 15%;
         background: #FDFFFF;
     }
-}
 
     .form-group {
         margin-bottom: 12px;
         margin-top: auto;
         margin-right: auto;
         margin-left: auto;
-        width: 250px;
+        width: 350px;
     }
     :root {
   --button-color: #ffffff;
@@ -68,33 +45,33 @@
 
         <div class="form-group">
             <label for="username">아이디 (닉네임)</label>
-            <input type="text" class="form-control" name="username" id="username"
+            <input style="height:80px;" type="text" class="form-control" name="username" id="username"
                    value="{{ form.username.value|default_if_none:'' }}">
         </div>
         <br/>
 
         <div class="form-group">
             <label for="email">이메일 주소</label>
-            <input type="text" class="form-control" name="email" id="email"
+            <input style="height:80px;" type="text" class="form-control" name="email" id="email"
                    value="{{ form.email.value|default_if_none:'' }}">
         </div>
         <br/>
 
         <div class="form-group">
             <label for="password1">비밀번호</label>
-            <input type="password" class="form-control" name="password1" id="password1"
+            <input style="height:80px;" type="password" class="form-control" name="password1" id="password1"
                    value="{{ form.password1.value|default_if_none:'' }}">
         </div>
         <br/>
 
         <div class="form-group">
             <label for="password2">비밀번호 확인</label>
-            <input type="password" class="form-control" name="password2" id="password2"
+            <input style="height:80px;" type="password" class="form-control" name="password2" id="password2"
                    value="{{ form.password2.value|default_if_none:'' }}">
         </div>
         <br/><br/>
 
-        <button id="button1" type="submit" class="btn btn-outline-success"><i class="fas fa-user-plus"> 가입</i></button>
+        <button style="font-size:23px;" id="button1" type="submit" class="btn btn-outline-success"><i class="fas fa-user-plus">가입</i></button>
     </form>
 </div>
 {% endblock %}
